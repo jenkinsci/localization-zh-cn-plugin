@@ -32,6 +32,20 @@
     </repository>
   </repositories>
 
+  <build>
+    <resources>
+      <resource>
+        <directory>credentials-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>kubernetes-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+  </build>
+
   <pluginRepositories>
     <pluginRepository>
       <id>repo.jenkins-ci.org</id>
