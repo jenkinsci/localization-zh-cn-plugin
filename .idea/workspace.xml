@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a8138bc-d351-480a-9e08-b8f7cfd3dfe7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/credentials-plugin/src/resources/com/cloudbees/plugins/credentials/BaseCredentials/config_zh_CN.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hudson/plugins/translation/L10nDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hudson/plugins/localization/L10nDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hudson/plugins/translation/Locales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hudson/plugins/localization/Locales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hudson/plugins/translation/ResourceBundleFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hudson/plugins/localization/ResourceBundleFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/translation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,59 +28,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ResourceBundleFactoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hudson/plugins/localization/ResourceBundleFactoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="48" column="94" selection-start-line="48" selection-start-column="94" selection-end-line="48" selection-end-column="94" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="38">
+                <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Locales.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hudson/plugins/localization/Locales.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config_zh_CN.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/credentials-plugin/src/resources/com/cloudbees/plugins/credentials/BaseCredentials/config_zh_CN.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Messages.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jenkins-ci/main/jenkins-core/1.580/jenkins-core-1.580.jar!/hudson/diagnosis/Messages.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceBundleHolder.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jvnet/localizer/localizer/1.10/localizer-1.10.jar!/org/jvnet/localizer/ResourceBundleHolder.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="body_zh_CN.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hudson/model/UpdateCenter/body_zh_CN.properties">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -112,6 +64,7 @@
         <option value="$PROJECT_DIR$/src/main/java/hudson/plugins/translation/L10nDecorator.java" />
         <option value="$PROJECT_DIR$/src/main/java/hudson/plugins/translation/ResourceBundleFactoryImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -159,9 +112,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="208" />
+    <option name="x" value="103" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="1221" />
     <option name="height" value="706" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -176,62 +129,6 @@
             <path>
               <item name="translation" type="b2602c69:ProjectViewProjectNode" />
               <item name="localization-plugin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials-plugin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cloudbees" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cloudbees" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cloudbees" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,6 +149,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/credentials-plugin/src/resources/com/cloudbees/plugins/credentials/BaseCredentials" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/hudson" />
     </key>
@@ -301,15 +199,16 @@
       <option name="presentableId" value="Default" />
       <updated>1535425859039</updated>
       <workItem from="1535425861201" duration="5138000" />
-      <workItem from="1535437004251" duration="324000" />
+      <workItem from="1535437004251" duration="742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5462000" />
+    <option name="totallyTimeSpent" value="5880000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="208" y="23" width="1280" height="706" extended-state="0" />
+    <frame x="103" y="23" width="1221" height="706" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -322,9 +221,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26108375" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.44827586" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19386107" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19508058" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -434,7 +333,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/credentials-plugin/src/resources/com/cloudbees/plugins/credentials/BaseCredentials/config_zh_CN.properties">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="38">
+            <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
