@@ -1,4 +1,4 @@
-package hudson.plugins.translation;
+package hudson.plugins.localization;
 
 import org.kohsuke.stapler.jelly.ResourceBundle;
 import org.kohsuke.stapler.jelly.ResourceBundleFactory;

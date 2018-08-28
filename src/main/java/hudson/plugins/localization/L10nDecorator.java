@@ -1,51 +1,10 @@
-package hudson.plugins.translation;
+package hudson.plugins.localization;
 
-import com.sun.mail.util.BASE64EncoderStream;
 import hudson.Extension;
-import hudson.Util;
-import hudson.plugins.translation.Locales.Entry;
 import hudson.model.Hudson;
 import hudson.model.PageDecorator;
-import hudson.remoting.Base64;
-import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.apache.commons.lang.StringUtils;
-import org.kohsuke.stapler.StaplerRequest;
-import org.kohsuke.stapler.StaplerResponse;
 import org.kohsuke.stapler.WebApp;
-import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.QueryParameter;
-import org.kohsuke.stapler.interceptor.RequirePOST;
-import org.kohsuke.stapler.jelly.InternationalizedStringExpressionListener;
 import org.kohsuke.stapler.jelly.JellyFacet;
-
-import javax.crypto.Cipher;
-import javax.crypto.CipherOutputStream;
-import javax.crypto.CipherInputStream;
-import static javax.crypto.Cipher.ENCRYPT_MODE;
-import static javax.crypto.Cipher.DECRYPT_MODE;
-import static javax.servlet.http.HttpServletResponse.SC_OK;
-import javax.servlet.ServletException;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.io.ByteArrayInputStream;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.security.GeneralSecurityException;
-import java.util.Collection;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Locale;
-import java.util.Properties;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.UUID;
-import java.util.zip.GZIPOutputStream;
-import java.util.zip.GZIPInputStream;
-
-import net.sf.json.JSONObject;
 
 /**
  * {@link PageDecorator} that adds the translation dialog.
