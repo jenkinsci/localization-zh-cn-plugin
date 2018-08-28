@@ -1,3 +1,3 @@
-# localization-plugin
+# chinese-localization-plugin
 
-Localization for Jenkins core and plugins.
+Chinese Localization for Jenkins core and plugins.
