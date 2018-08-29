@@ -1,6 +1,6 @@
-# Chinese Localization Plugin
+# Simplified Chinese Plugin
 
-Chinese Localization for Jenkins core and plugins.
+Simplified Chinese Localization for Jenkins core and plugins.
 
 # Contribution
 
