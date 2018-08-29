@@ -7,11 +7,11 @@
     <version>2.7</version>
   </parent>
 
-  <artifactId>chinese-localization</artifactId>
+  <artifactId>simplified-chinese</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
-  <name>Jenkins Chinese Localization plugin</name>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/Chinese-Localization+Plugin</url>
+  <name>Simplified Chinese plugin</name>
+  <url>https://wiki.jenkins-ci.org/display/JENKINS/Simplified+Chinese+Plugin</url>
 
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
