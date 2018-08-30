@@ -21,7 +21,10 @@ public class L10nDecorator extends PageDecorator {
 
         // hook into Stapler to activate contributed l10n
         hudson = Hudson.getInstance();
-        WebApp.get(hudson.servletContext).getFacet(JellyFacet.class).resourceBundleFactory
-                = bundleFactory;
+        WebApp webContext = WebApp.get(hudson.servletContext);
+        JellyFacet facet = webContext.getFacet(JellyFacet.class);
+        facet.resourceBundleFactory = bundleFactory;
+
+        webContext.facets.add(new LocalizationFacet());
     }
 }
