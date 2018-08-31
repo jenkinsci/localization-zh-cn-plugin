@@ -1,4 +1,10 @@
 **/*.iml
 
-idea
+.idea
+.DS_Store
+
+# maven stuff
 target
+
+# jenkins stuff
+work

@@ -12,6 +12,7 @@ public class I18nDispatcher extends Dispatcher {
     @Override
     public boolean dispatch(RequestImpl req, ResponseImpl rsp, Object node) throws IOException, ServletException, IllegalAccessException, InvocationTargetException {
         if(req.getOriginalRequestURI().endsWith("help")) {
+//            new I18nRequestDispatcher().forward(req.getRequest(), rsp.getResponse());
             return true;
         }
 

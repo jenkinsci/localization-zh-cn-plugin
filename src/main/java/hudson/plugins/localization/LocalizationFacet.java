@@ -17,7 +17,12 @@ public class LocalizationFacet extends Facet {
 
     @Override
     public RequestDispatcher createRequestDispatcher(RequestImpl request, Klass<?> type, Object it, String viewName) throws IOException {
-        return super.createRequestDispatcher(request, type, it, viewName);
+        RequestDispatcher dispatcher = super.createRequestDispatcher(request, type, it, viewName);
+        if(dispatcher == null) {
+//            dispatcher = new I18nRequestDispatcher(request, type, it, viewName);
+        }
+
+        return dispatcher;
     }
 
     @Override
