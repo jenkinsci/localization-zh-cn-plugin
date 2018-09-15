@@ -23,7 +23,6 @@ public class I18nRequestDispatcher implements RequestDispatcher {
 
     @Override
     public void forward(ServletRequest req, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("forward");
         String path = this.request.getOriginalRestOfPath();
         String uri = this.request.getOriginalRequestURI();
 
@@ -34,6 +33,5 @@ public class I18nRequestDispatcher implements RequestDispatcher {
 
     @Override
     public void include(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("include");
     }
 }

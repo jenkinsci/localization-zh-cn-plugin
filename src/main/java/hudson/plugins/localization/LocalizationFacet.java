@@ -11,7 +11,6 @@ import java.util.List;
 public class LocalizationFacet extends Facet {
     @Override
     public void buildViewDispatchers(MetaClass owner, List<Dispatcher> dispatchers) {
-        System.out.println(12);
         dispatchers.add(new I18nDispatcher());
     }
 
