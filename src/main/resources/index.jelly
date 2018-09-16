@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  Jenkins 及其插件的简体中文语言包。
+</div>
