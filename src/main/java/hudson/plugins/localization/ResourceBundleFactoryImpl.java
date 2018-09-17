@@ -7,10 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Enumeration;
-import java.util.HashSet;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -19,9 +16,16 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author suren
  */
 final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
+    private ResourceBundleFactory parentFactory;
+
+    public ResourceBundleFactoryImpl(ResourceBundleFactory parentFactory) {
+        this.parentFactory = parentFactory;
+    }
 
     @Override
     public ResourceBundle create(String baseName) {
+        final ResourceBundle resourceBundle = this.parentFactory.create(baseName);
+
         return new ResourceBundle(baseName) {
             private int modCount = reloadModCount.get();
             @Override
@@ -33,6 +37,7 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
                 }
 
                 Properties originPro = super.get(key);
+
                 ClassLoader clsLoader = this.getClass().getClassLoader();
 
                 try {
@@ -73,6 +78,24 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
                 }
 
                 return originPro;
+            }
+
+            @Override
+            public String getFormatString(Locale locale, String key) {
+                String text =  super.getFormatString(locale, key);
+                if(text == null) {
+                    text = resourceBundle.getFormatString(locale, key);
+                }
+                return text;
+            }
+
+            @Override
+            public String getFormatStringWithoutDefaulting(Locale locale, String key) {
+                String text = super.getFormatStringWithoutDefaulting(locale, key);
+                if(text == null) {
+                    text = resourceBundle.getFormatStringWithoutDefaulting(locale, key);
+                }
+                return text;
             }
         };
     }

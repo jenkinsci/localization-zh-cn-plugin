@@ -13,17 +13,14 @@ import org.kohsuke.stapler.jelly.JellyFacet;
  */
 @Extension
 public class L10nDecorator extends PageDecorator {
-    private final ResourceBundleFactoryImpl bundleFactory = new ResourceBundleFactoryImpl();
-    private final Hudson hudson;
-
     public L10nDecorator() {
         super(L10nDecorator.class);
 
         // hook into Stapler to activate contributed l10n
-        hudson = Hudson.getInstance();
+        Hudson hudson = Hudson.getInstance();
         WebApp webContext = WebApp.get(hudson.servletContext);
         JellyFacet facet = webContext.getFacet(JellyFacet.class);
-        facet.resourceBundleFactory = bundleFactory;
+        facet.resourceBundleFactory = new ResourceBundleFactoryImpl(facet.resourceBundleFactory);
 
         webContext.facets.add(new LocalizationFacet());
     }
