@@ -32,6 +32,13 @@
     </repository>
   </repositories>
 
+  <developers>
+    <developer>
+      <id>linuxsuren</id>
+      <name>Zhao Xiaojie</name>
+    </developer>
+  </developers>
+
   <build>
     <resources>
       <resource>
