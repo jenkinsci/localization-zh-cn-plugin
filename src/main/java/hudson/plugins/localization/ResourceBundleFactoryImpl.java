@@ -42,33 +42,42 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
 
                 try {
                     URL url = new URL(this.getBaseName());
+                    String localizationResource = null;
                     if("jar".equals(url.getProtocol())) {
                         String resource = this.getBaseName().replaceFirst(".*jar!", "");
-                        String localizationResource = resource + key + ".properties";
+                        localizationResource = resource + key + ".properties";
+                    } else if("file".equals(url.getProtocol())) {
+                        // for local testing
+                        String resource = this.getBaseName().replaceFirst(".*src/main/resources/", "");
+                        localizationResource = resource + key + ".properties";
+                    }
 
-                        Set<URL> urls = new HashSet<>();
-                        URL locRes = this.getClass().getResource(localizationResource);
-                        if(locRes != null) {
-                            urls.add(locRes);
+                    if(localizationResource == null) {
+                        return originPro;
+                    }
+
+                    Set<URL> urls = new HashSet<>();
+                    URL locRes = this.getClass().getResource(localizationResource);
+                    if(locRes != null) {
+                        urls.add(locRes);
+                    }
+                    Enumeration<URL> resList = clsLoader.getResources(localizationResource);
+                    while(resList.hasMoreElements()) {
+                        URL item = resList.nextElement();
+                        if(item.equals(url)) {
+                            continue;
                         }
-                        Enumeration<URL> resList = clsLoader.getResources(localizationResource);
-                        while(resList.hasMoreElements()) {
-                            URL item = resList.nextElement();
-                            if(item.equals(url)) {
-                                continue;
-                            }
 
-                            urls.add(item);
-                        }
+                        urls.add(item);
+                    }
 
-                        for(URL item : urls) {
-                            try(InputStream input = item.openStream()) {
-                                if(input != null) {
-                                    originPro.load(input);
-                                }
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                    for(URL item : urls) {
+                        try(InputStream input = item.openStream()) {
+                            if(input != null) {
+                                originPro.load(input);
                             }
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
                     }
                 } catch (MalformedURLException e) {
