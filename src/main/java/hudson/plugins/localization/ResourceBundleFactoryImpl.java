@@ -7,10 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Enumeration;
-import java.util.HashSet;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -19,9 +16,16 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author suren
  */
 final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
+    private ResourceBundleFactory parentFactory;
+
+    public ResourceBundleFactoryImpl(ResourceBundleFactory parentFactory) {
+        this.parentFactory = parentFactory;
+    }
 
     @Override
     public ResourceBundle create(String baseName) {
+        final ResourceBundle resourceBundle = this.parentFactory.create(baseName);
+
         return new ResourceBundle(baseName) {
             private int modCount = reloadModCount.get();
             @Override
@@ -33,37 +37,47 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
                 }
 
                 Properties originPro = super.get(key);
+
                 ClassLoader clsLoader = this.getClass().getClassLoader();
 
                 try {
                     URL url = new URL(this.getBaseName());
+                    String localizationResource = null;
                     if("jar".equals(url.getProtocol())) {
                         String resource = this.getBaseName().replaceFirst(".*jar!", "");
-                        String localizationResource = resource + key + ".properties";
+                        localizationResource = resource + key + ".properties";
+                    } else if("file".equals(url.getProtocol())) {
+                        // for local testing
+                        String resource = this.getBaseName().replaceFirst(".*src/main/resources/", "");
+                        localizationResource = resource + key + ".properties";
+                    }
 
-                        Set<URL> urls = new HashSet<>();
-                        URL locRes = this.getClass().getResource(localizationResource);
-                        if(locRes != null) {
-                            urls.add(locRes);
+                    if(localizationResource == null) {
+                        return originPro;
+                    }
+
+                    Set<URL> urls = new HashSet<>();
+                    URL locRes = this.getClass().getResource(localizationResource);
+                    if(locRes != null) {
+                        urls.add(locRes);
+                    }
+                    Enumeration<URL> resList = clsLoader.getResources(localizationResource);
+                    while(resList.hasMoreElements()) {
+                        URL item = resList.nextElement();
+                        if(item.equals(url)) {
+                            continue;
                         }
-                        Enumeration<URL> resList = clsLoader.getResources(localizationResource);
-                        while(resList.hasMoreElements()) {
-                            URL item = resList.nextElement();
-                            if(item.equals(url)) {
-                                continue;
-                            }
 
-                            urls.add(item);
-                        }
+                        urls.add(item);
+                    }
 
-                        for(URL item : urls) {
-                            try(InputStream input = item.openStream()) {
-                                if(input != null) {
-                                    originPro.load(input);
-                                }
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                    for(URL item : urls) {
+                        try(InputStream input = item.openStream()) {
+                            if(input != null) {
+                                originPro.load(input);
                             }
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
                     }
                 } catch (MalformedURLException e) {
@@ -73,6 +87,24 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
                 }
 
                 return originPro;
+            }
+
+            @Override
+            public String getFormatString(Locale locale, String key) {
+                String text =  super.getFormatString(locale, key);
+                if(text == null) {
+                    text = resourceBundle.getFormatString(locale, key);
+                }
+                return text;
+            }
+
+            @Override
+            public String getFormatStringWithoutDefaulting(Locale locale, String key) {
+                String text = super.getFormatStringWithoutDefaulting(locale, key);
+                if(text == null) {
+                    text = resourceBundle.getFormatStringWithoutDefaulting(locale, key);
+                }
+                return text;
             }
         };
     }

@@ -44,6 +44,9 @@
         <directory>configuration-as-code/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>alauda-devops-sync-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>src/main/resources</directory>
       </resource>
     </resources>
