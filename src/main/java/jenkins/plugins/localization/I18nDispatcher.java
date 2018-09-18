@@ -1,4 +1,4 @@
-package hudson.plugins.localization;
+package jenkins.plugins.localization;
 
 import org.kohsuke.stapler.Dispatcher;
 import org.kohsuke.stapler.RequestImpl;

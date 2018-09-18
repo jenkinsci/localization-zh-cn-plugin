@@ -1,4 +1,4 @@
-package hudson.plugins.localization;
+package jenkins.plugins.localization;
 
 import hudson.Extension;
 import hudson.model.Hudson;
