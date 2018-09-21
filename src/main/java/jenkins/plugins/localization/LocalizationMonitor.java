@@ -44,6 +44,10 @@ public class LocalizationMonitor extends AdministrativeMonitor {
     }
 
     private boolean isOk(Object obj, Class<?> clazz) {
+        if(obj.getClass().equals(ResourceBundleFactoryImpl.class)) {
+            return true;
+        }
+
         try {
             Method method = clazz.getMethod("getParentFactory");
             if(method != null) {
