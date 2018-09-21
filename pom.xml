@@ -62,6 +62,14 @@
     </resources>
   </build>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.jenkins-ci</groupId>
+      <artifactId>symbol-annotation</artifactId>
+      <version>1.14</version>
+    </dependency>
+  </dependencies>
+
   <pluginRepositories>
     <pluginRepository>
       <id>repo.jenkins-ci.org</id>

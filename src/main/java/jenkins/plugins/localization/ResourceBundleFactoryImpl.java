@@ -109,6 +109,10 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
         };
     }
 
+    public ResourceBundleFactory getParentFactory() {
+        return parentFactory;
+    }
+
     /**
      * Used to force the reloading of a cache.
      */
