@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>localization-zh-cn</artifactId>
-  <version>0.0.4-SNAPSHOT</version>
+  <version>0.0.6-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>Localization: Chinese (Simplified)</name>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Localization+zh+cn+Plugin</url>
@@ -32,6 +32,13 @@
     </repository>
   </repositories>
 
+  <developers>
+    <developer>
+      <id>linuxsuren</id>
+      <name>Zhao Xiaojie</name>
+    </developer>
+  </developers>
+
   <build>
     <resources>
       <resource>
@@ -39,6 +46,15 @@
       </resource>
       <resource>
         <directory>kubernetes-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>configuration-as-code-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>alauda-devops-sync-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>locale-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>translation-plugin/src/main/resources</directory>
