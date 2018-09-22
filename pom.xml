@@ -57,6 +57,9 @@
         <directory>locale-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>hugo-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>src/main/resources</directory>
       </resource>
     </resources>
