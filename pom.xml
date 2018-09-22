@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>localization-zh-cn</artifactId>
-  <version>0.0.5-SNAPSHOT</version>
+  <version>0.0.7-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>Localization: Chinese (Simplified)</name>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Localization+zh+cn+Plugin</url>
@@ -60,10 +60,24 @@
         <directory>hugo-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>core/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>core/src/main/webapp</directory>
+      </resource>
+      <resource>
         <directory>src/main/resources</directory>
       </resource>
     </resources>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jenkins-ci</groupId>
+      <artifactId>symbol-annotation</artifactId>
+      <version>1.14</version>
+    </dependency>
+  </dependencies>
 
   <pluginRepositories>
     <pluginRepository>
