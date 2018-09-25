@@ -66,6 +66,9 @@
         <directory>workflow-job-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>workflow-cps-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>core/src/main/resources</directory>
       </resource>
       <resource>
