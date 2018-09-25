@@ -60,6 +60,9 @@
         <directory>hugo-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>workflow-job-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>core/src/main/resources</directory>
       </resource>
       <resource>
