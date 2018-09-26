@@ -1,6 +1,7 @@
 # Simplified Chinese Plugin
 
-Simplified Chinese Localization for Jenkins core and plugins.
+Simplified Chinese Localization for Jenkins core and plugins.  
+See [JEP-216](https://github.com/jenkinsci/jep/blob/master/jep/216/README.adoc) for design details.
 
 # Limitation
 
