@@ -5,7 +5,11 @@ See [JEP-216](https://github.com/jenkinsci/jep/blob/master/jep/216/README.adoc) 
 
 # Limitation
 
-The plugin only support *.jelly localization resources for now.
+The plugin only support *.jelly and help-*.html localization resources for now.
+
+# How-To Guides
+
+Here are some guides about [how to contribute localization](https://jenkins.io/doc/developer/internationalization/) for a Jenkins plugin.
 
 # Contribution
 
