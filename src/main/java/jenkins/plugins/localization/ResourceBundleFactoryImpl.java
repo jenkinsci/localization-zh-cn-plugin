@@ -6,6 +6,8 @@ import org.kohsuke.stapler.jelly.ResourceBundleFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -56,23 +58,33 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
                         return originPro;
                     }
 
-                    Set<URL> urls = new HashSet<>();
+                    Set<URI> uriSet = new HashSet<>();
                     URL locRes = this.getClass().getResource(localizationResource);
                     if(locRes != null) {
-                        urls.add(locRes);
+                        try {
+                            uriSet.add(locRes.toURI());
+                        } catch (URISyntaxException e) {
+                            e.printStackTrace();
+                        }
                     }
                     Enumeration<URL> resList = clsLoader.getResources(localizationResource);
                     while(resList.hasMoreElements()) {
                         URL item = resList.nextElement();
-                        if(item.equals(url)) {
-                            continue;
-                        }
 
-                        urls.add(item);
+                        try {
+                            URI itemURI = item.toURI();
+                            if(itemURI.equals(url.toURI())) {
+                                continue;
+                            }
+
+                            uriSet.add(itemURI);
+                        } catch (URISyntaxException e) {
+                            e.printStackTrace();
+                        }
                     }
 
-                    for(URL item : urls) {
-                        try(InputStream input = item.openStream()) {
+                    for(URI item : uriSet) {
+                        try(InputStream input = item.toURL().openStream()) {
                             if(input != null) {
                                 originPro.load(input);
                             }
@@ -120,5 +132,10 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
 
     public void clearCache() {
         reloadModCount.incrementAndGet();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }

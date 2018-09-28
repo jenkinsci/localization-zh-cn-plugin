@@ -43,7 +43,7 @@ public class LocalizationFacet extends Facet {
                 }
 
                 if(targetResource != null) {
-                    dispatcher = new I18nRequestDispatcher(request, type, it, viewName, targetResource);
+                    dispatcher = new I18nRequestDispatcher(request, targetResource);
                 }
             }
         }
