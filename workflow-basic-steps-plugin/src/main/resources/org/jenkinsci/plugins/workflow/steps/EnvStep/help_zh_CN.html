@@ -1,0 +1,13 @@
+<div>
+定义一个或者多个环境变量。在这个范围内，对任何外部的进程都是可见的。
+例如：
+<p><pre>
+node {
+  withEnv(['MYTOOL_HOME=/usr/local/mytool']) {
+    sh '$MYTOOL_HOME/bin/start'
+  }
+}
+</pre>
+<p>（注意在Groovy中，我们使用的是单引号，因此是在 Bourne shell 中扩展的变量，而不是Jenkins中。）
+<p>在文档中有关环境变量处，可以看到更多有关 <code>env</code> 的信息。
+</div>
