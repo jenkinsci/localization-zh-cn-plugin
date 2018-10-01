@@ -58,6 +58,8 @@ public class LocalizationMonitor extends AdministrativeMonitor {
                     return isOk(result, obj.getClass().getSuperclass());
                 }
             }
+        } catch (NoSuchMethodException e) {
+            return false;
         } catch (Exception e) {
             e.printStackTrace();
         }
