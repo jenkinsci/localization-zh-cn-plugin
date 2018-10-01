@@ -45,6 +45,9 @@
         <directory>credentials-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>cloudbees-folder-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>kubernetes-plugin/src/main/resources</directory>
       </resource>
       <resource>
