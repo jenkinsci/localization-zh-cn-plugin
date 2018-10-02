@@ -51,6 +51,9 @@
         <directory>kubernetes-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>cmakebuilder-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>code-coverage-api-plugin/src/main/resources</directory>
       </resource>
       <resource>
