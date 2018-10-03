@@ -138,4 +138,9 @@ final class ResourceBundleFactoryImpl extends ResourceBundleFactory {
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
