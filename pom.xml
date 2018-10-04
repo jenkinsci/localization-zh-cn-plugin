@@ -84,6 +84,9 @@
         <directory>workflow-basic-steps-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>pipeline-input-step-plugin/pipeline-model-definition/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>pipeline-model-definition-plugin/pipeline-model-definition/src/main/resources</directory>
       </resource>
       <resource>
