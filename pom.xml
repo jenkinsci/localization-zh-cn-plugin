@@ -84,6 +84,9 @@
         <directory>pipeline-model-definition-plugin/pipeline-model-definition/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>pipeline-stage-view-plugin/ui/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>core/src/main/resources</directory>
       </resource>
       <resource>
