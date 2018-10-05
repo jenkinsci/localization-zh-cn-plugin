@@ -72,6 +72,9 @@
         <directory>locale-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>matrix-auth-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>translation-plugin/src/main/resources</directory>
       </resource>
       <resource>
