@@ -75,6 +75,9 @@
         <directory>matrix-auth-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>pam-auth-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>translation-plugin/src/main/resources</directory>
       </resource>
       <resource>
@@ -100,6 +103,9 @@
       </resource>
       <resource>
         <directory>role-strategy-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>ssh-slaves-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>core/src/main/resources</directory>
