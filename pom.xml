@@ -111,6 +111,9 @@
         <directory>ssh-slaves-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>subversion-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>timestamper-plugin/src/main/resources</directory>
       </resource>
       <resource>
