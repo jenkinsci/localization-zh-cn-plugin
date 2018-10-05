@@ -72,6 +72,9 @@
         <directory>locale-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>mailer-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>matrix-auth-plugin/src/main/resources</directory>
       </resource>
       <resource>
@@ -108,6 +111,9 @@
         <directory>ssh-slaves-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>timestamper-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>core/src/main/resources</directory>
       </resource>
       <resource>
@@ -115,6 +121,9 @@
       </resource>
       <resource>
         <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>ws-cleanup-plugin/main/resources</directory>
       </resource>
     </resources>
   </build>
