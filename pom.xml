@@ -99,6 +99,9 @@
         <directory>pipeline-stage-view-plugin/ui/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>role-strategy-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>core/src/main/resources</directory>
       </resource>
       <resource>
