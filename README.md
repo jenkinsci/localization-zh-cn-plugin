@@ -16,3 +16,5 @@ Here are some guides about [how to contribute localization](https://jenkins.io/d
 If you are interested in localization, please check [Chinese Localization SIG](https://jenkins.io/sigs/chinese-localization/) first.
 
 All Chinese characters will convert to ASCII. It's hard to read. So you could use [online tools](https://native2ascii.net/).
+
+Everyone should follow the [translation specification](specification.md).
