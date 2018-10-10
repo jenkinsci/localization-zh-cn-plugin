@@ -42,6 +42,9 @@
   <build>
     <resources>
       <resource>
+        <directory>bitbucket-branch-source-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>bitbucket-plugin/src/main/resources</directory>
       </resource>
       <resource>
