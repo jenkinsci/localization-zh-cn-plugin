@@ -4,4 +4,4 @@
 
 ### Desired reviewers
 
-@chinese-localization-sig
+@jenkinsci/chinese-localization-sig
