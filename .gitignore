@@ -8,3 +8,9 @@ target
 
 # jenkins stuff
 work
+
+.classpath
+.settings/
+.bin/
+.factorypath
+.project
