@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>localization-zh-cn</artifactId>
-  <version>0.0.11-SNAPSHOT</version>
+  <version>0.0.11</version>
   <packaging>hpi</packaging>
   <name>Localization: Chinese (Simplified)</name>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Localization+zh+cn+Plugin</url>
@@ -17,7 +17,7 @@
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    <tag>HEAD</tag>
+    <tag>localization-zh-cn-0.0.11</tag>
   </scm>
   
   <properties>
