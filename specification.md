@@ -8,8 +8,10 @@
 
 部分技术术语，我们无需进行翻译，应该保留。
 
+* Jenkins
 * Pull Request
 * master
+* token
 
 # 中英文对照表
 
@@ -22,5 +24,8 @@
 |Dashboard|工作台|
 |Job|任务|
 |Pipeline|流水线|
+|Code of Conduct|行为守则|
+|press contact|媒体联系人|
+
 
 如果有任何疑问，请先针对该说明发起讨论。
