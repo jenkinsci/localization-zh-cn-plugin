@@ -21,7 +21,8 @@
   </scm>
   
   <properties>
-     <jenkins.version>2.151-SNAPSHOT</jenkins.version>
+     <jenkins-core.version>2.151-20181111.210424-1</jenkins-core.version>
+     <jenkins-war.version>2.151-20181111.210539-1</jenkins-war.version>
      <java.level>8</java.level>
    </properties>
 
