@@ -3,6 +3,7 @@
 # 风格
 
 * 中英文之间使用一个空格分割
+* [参考文章](https://github.com/LCTT/TranslateProject/blob/master/%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E6%8C%87%E5%8C%97.md)
 
 # 术语
 
