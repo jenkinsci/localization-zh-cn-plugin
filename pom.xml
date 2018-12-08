@@ -42,91 +42,91 @@
   <build>
     <resources>
       <resource>
-        <directory>bitbucket-branch-source-plugin/src/main/resources</directory>
+        <directory>plugins/bitbucket-branch-source-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>bitbucket-build-status-notifier-plugin/src/main/resources</directory>
+        <directory>plugins/bitbucket-build-status-notifier-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>bitbucket-plugin/src/main/resources</directory>
+        <directory>plugins/bitbucket-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>credentials-binding-plugin/src/main/resources</directory>
+        <directory>plugins/credentials-binding-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>credentials-plugin/src/main/resources</directory>
+        <directory>plugins/credentials-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>cloudbees-folder-plugin/src/main/resources</directory>
+        <directory>plugins/cloudbees-folder-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>kubernetes-plugin/src/main/resources</directory>
+        <directory>plugins/kubernetes-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>cmakebuilder-plugin/src/main/resources</directory>
+        <directory>plugins/cmakebuilder-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>code-coverage-api-plugin/src/main/resources</directory>
+        <directory>plugins/code-coverage-api-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>configuration-as-code-plugin/src/main/resources</directory>
+        <directory>plugins/configuration-as-code-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>alauda-devops-sync-plugin/src/main/resources</directory>
+        <directory>plugins/alauda-devops-sync-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>ldap-plugin/src/main/resources</directory>
+        <directory>plugins/ldap-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>locale-plugin/src/main/resources</directory>
+        <directory>plugins/locale-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>mailer-plugin/src/main/resources</directory>
+        <directory>plugins/mailer-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>matrix-auth-plugin/src/main/resources</directory>
+        <directory>plugins/matrix-auth-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>pam-auth-plugin/src/main/resources</directory>
+        <directory>plugins/pam-auth-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>translation-plugin/src/main/resources</directory>
+        <directory>plugins/translation-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>hugo-plugin/src/main/resources</directory>
+        <directory>plugins/hugo-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>job-restrictions-plugin/src/main/resources</directory>
+        <directory>plugins/job-restrictions-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>workflow-job-plugin/src/main/resources</directory>
+        <directory>plugins/workflow-job-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>workflow-cps-plugin/src/main/resources</directory>
+        <directory>plugins/workflow-cps-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>workflow-basic-steps-plugin/src/main/resources</directory>
+        <directory>plugins/workflow-basic-steps-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>pipeline-input-step-plugin/pipeline-model-definition/src/main/resources</directory>
+        <directory>plugins/pipeline-input-step-plugin/pipeline-model-definition/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>pipeline-model-definition-plugin/pipeline-model-definition/src/main/resources</directory>
+        <directory>plugins/pipeline-model-definition-plugin/pipeline-model-definition/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>pipeline-stage-view-plugin/ui/src/main/resources</directory>
+        <directory>plugins/pipeline-stage-view-plugin/ui/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>role-strategy-plugin/src/main/resources</directory>
+        <directory>plugins/role-strategy-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>ssh-slaves-plugin/src/main/resources</directory>
+        <directory>plugins/ssh-slaves-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>subversion-plugin/src/main/resources</directory>
+        <directory>plugins/subversion-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>timestamper-plugin/src/main/resources</directory>
+        <directory>plugins/timestamper-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>core/src/main/resources</directory>
@@ -138,7 +138,7 @@
         <directory>src/main/resources</directory>
       </resource>
       <resource>
-        <directory>ws-cleanup-plugin/main/resources</directory>
+        <directory>plugins/ws-cleanup-plugin/main/resources</directory>
       </resource>
     </resources>
   </build>
