@@ -99,13 +99,19 @@
         <directory>plugins/job-restrictions-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/workflow-job-plugin/src/main/resources</directory>
+        <directory>plugins/workflow-basic-steps-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/workflow-cps-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/workflow-basic-steps-plugin/src/main/resources</directory>
+        <directory>plugins/workflow-job-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/workflow-multibranch-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/workflow-support-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/pipeline-input-step-plugin/pipeline-model-definition/src/main/resources</directory>
