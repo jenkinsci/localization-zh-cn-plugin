@@ -1,6 +1,7 @@
 package io.jenkins.plugins.localization_zh_cn;
 
 import hudson.Extension;
+import hudson.PluginWrapper;
 import io.jenkins.plugins.localization.support.LocalizationContributor;
 
 import javax.annotation.CheckForNull;
@@ -13,5 +14,11 @@ public class LocalizationContributorImpl extends LocalizationContributor {
     @Override
     public URL getResource(@Nonnull String s) {
         return getClass().getClassLoader().getResource(s);
+    }
+
+    @CheckForNull
+    @Override
+    public URL getPluginResource(@Nonnull String s, @Nonnull PluginWrapper pluginWrapper) {
+        return getClass().getClassLoader().getResource("/webapp/" + s);
     }
 }
