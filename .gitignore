@@ -16,3 +16,6 @@ work
 .bin/
 .factorypath
 .project
+
+# private files
+env.sh
