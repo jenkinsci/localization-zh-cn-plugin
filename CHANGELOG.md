@@ -1,5 +1,6 @@
 # 0.0.15 (not release yet)
 
+* oops 页面
 * 凭据插件
 * 线程转存
 
