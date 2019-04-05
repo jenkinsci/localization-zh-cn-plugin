@@ -114,10 +114,10 @@
         <directory>plugins/workflow-support-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/pipeline-input-step-plugin/pipeline-model-definition/src/main/resources</directory>
+        <directory>plugins/pipeline-input-step-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/pipeline-model-definition-plugin/pipeline-model-definition/src/main/resources</directory>
+        <directory>plugins/pipeline-model-definition-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/pipeline-stage-view-plugin/ui/src/main/resources</directory>
