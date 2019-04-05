@@ -57,6 +57,9 @@
         <directory>plugins/credentials-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>plugins/customize-build-now-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>plugins/cloudbees-folder-plugin/src/main/resources</directory>
       </resource>
       <resource>
