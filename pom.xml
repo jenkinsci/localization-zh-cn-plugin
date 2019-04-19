@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>localization-zh-cn</artifactId>
-  <version>0.0.14-SNAPSHOT</version>
+  <version>0.0.16-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>Localization: Chinese (Simplified)</name>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Localization+zh+cn+Plugin</url>
@@ -57,6 +57,9 @@
       </resource>
       <resource>
         <directory>credentials-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/customize-build-now-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/cloudbees-folder-plugin/src/main/resources</directory>
@@ -116,10 +119,10 @@
         <directory>plugins/workflow-support-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/pipeline-input-step-plugin/pipeline-model-definition/src/main/resources</directory>
+        <directory>plugins/pipeline-input-step-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/pipeline-model-definition-plugin/pipeline-model-definition/src/main/resources</directory>
+        <directory>plugins/pipeline-model-definition-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/pipeline-stage-view-plugin/ui/src/main/resources</directory>
