@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>3.19</version>
+    <version>3.42</version>
   </parent>
 
   <artifactId>localization-zh-cn</artifactId>
@@ -21,9 +21,7 @@
   </scm>
   
   <properties>
-    <jenkins.version>2.164-SNAPSHOT</jenkins.version>
-    <jenkins-core.version>2.164-20190205.211051-1</jenkins-core.version>
-    <jenkins-war.version>2.164-20190205.211156-1</jenkins-war.version>
+    <jenkins.version>2.173</jenkins.version>
      <java.level>8</java.level>
    </properties>
 
@@ -163,7 +161,7 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>localization-support</artifactId>
-      <version>1.0-20190205.213259-2</version>
+      <version>1.0-rc11.760484f8a578</version>
     </dependency>
   </dependencies>
 
