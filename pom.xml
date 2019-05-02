@@ -141,9 +141,6 @@
         <directory>core/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>core/src/main/webapp</directory>
-      </resource>
-      <resource>
         <directory>src/main/resources</directory>
       </resource>
       <resource>
