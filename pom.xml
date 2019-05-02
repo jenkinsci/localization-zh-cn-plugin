@@ -54,7 +54,7 @@
         <directory>plugins/credentials-binding-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>credentials-plugin/src/main/resources</directory>
+        <directory>plugins/credentials-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/customize-build-now-plugin/src/main/resources</directory>
