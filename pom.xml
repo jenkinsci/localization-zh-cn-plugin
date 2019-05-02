@@ -161,7 +161,7 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>localization-support</artifactId>
-      <version>1.0-rc11.760484f8a578</version>
+      <version>1.1-rc18.4f3161a233d8</version>
     </dependency>
   </dependencies>
 
