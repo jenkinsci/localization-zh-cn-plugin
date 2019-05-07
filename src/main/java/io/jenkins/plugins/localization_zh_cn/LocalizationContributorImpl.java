@@ -13,6 +13,9 @@ public class LocalizationContributorImpl extends LocalizationContributor {
     @CheckForNull
     @Override
     public URL getResource(@Nonnull String s) {
+        if (s.startsWith("/")) {
+            s = s.substring(1);
+        }
         return getClass().getClassLoader().getResource(s);
     }
 
