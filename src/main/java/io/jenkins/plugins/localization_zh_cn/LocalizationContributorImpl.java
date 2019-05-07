@@ -22,6 +22,6 @@ public class LocalizationContributorImpl extends LocalizationContributor {
     @CheckForNull
     @Override
     public URL getPluginResource(@Nonnull String s, @Nonnull PluginWrapper pluginWrapper) {
-        return getClass().getClassLoader().getResource("/webapp/" + s);
+        return getClass().getClassLoader().getResource("webapp/" + s);
     }
 }
