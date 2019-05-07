@@ -57,6 +57,10 @@
         <directory>plugins/credentials-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>plugins/credentials-plugin/src/main/webapp</directory>
+        <targetPath>webapp</targetPath>
+      </resource>
+      <resource>
         <directory>plugins/customize-build-now-plugin/src/main/resources</directory>
       </resource>
       <resource>
