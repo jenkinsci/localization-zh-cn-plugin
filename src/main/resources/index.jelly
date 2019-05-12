@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <div>
-  Jenkins 及其插件的简体中文语言包。
+  Jenkins Core 及其插件的简体中文语言包，由 <a href="https://jenkins-zh.cn/about" target="_blank">Jenkins 中文社区</a>提供支持。
 </div>

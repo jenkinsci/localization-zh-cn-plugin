@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<span>
+  <a href="${rootURL}/chinese">Jenkins 中文社区</a>
+</span>
