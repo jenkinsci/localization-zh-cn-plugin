@@ -4,7 +4,7 @@
     <st:include page="sidepanel.jelly" it="${app}"/>
     <l:main-panel>
       <div style="margin:10px;">
-      <a href="https://plugins.jenkins.io/localization-zh-cn" target="_blank">简体中文插件</a>是由<a href="https://jenkins-zh.cn/about" target="_blank">Jenkins 中文社区</a>维护。我们致力于给每一位 Jenkins 的中文用户带来更好的体验，并非常欢迎您反馈任何建议和意见。
+      Jenkins Core 及其插件的简体中文语言包，由 <a href="https://jenkins-zh.cn/about" target="_blank">Jenkins 中文社区</a>维护。我们致力于给每一位 Jenkins 的中文用户带来更好的体验，并非常欢迎您反馈任何建议和意见。
       </div>
 
       <div style="margin:10px;">
