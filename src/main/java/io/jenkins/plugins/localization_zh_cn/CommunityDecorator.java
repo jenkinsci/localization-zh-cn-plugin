@@ -17,7 +17,8 @@ public class CommunityDecorator extends PageDecorator {
 
         String languages = req.getHeader("Accept-Language");
         if(languages != null) {
-            return languages.startsWith(Locale.SIMPLIFIED_CHINESE.toString());
+            return languages.startsWith(Locale.SIMPLIFIED_CHINESE.toString())
+                    || languages.startsWith("zh-CN");
         }
 
         return false;
