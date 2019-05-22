@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:st="jelly:stapler">
-    <j:if test="${it.isCurrentLanguage()}">
+    <j:if test="${it.showCommunityLink()}">
         <span>
           <a href="${rootURL}/chinese">Jenkins 中文社区</a>
         </span>
