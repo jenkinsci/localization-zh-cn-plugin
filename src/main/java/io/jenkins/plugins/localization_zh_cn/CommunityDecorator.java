@@ -37,14 +37,15 @@ public class CommunityDecorator extends PageDecorator {
             return isCurrentLanguage;
         }
 
-        String conditionName = communityProperty.getShowCondition();
-        if(conditionName == null) {
-            // when this plugin just be installed without restart, could be under this situation
-            return isCurrentLanguage;
+        UserCommunityProperty.ShowConditions condition = UserCommunityProperty.ShowConditions.Chinese;
+        try {
+            String conditionName = communityProperty.getShowCondition();
+            condition = UserCommunityProperty.ShowConditions.valueOf(conditionName);
+        } catch (IllegalArgumentException | NullPointerException e) {
+            // ignore the invalid conditions
+            // when this plugin just be installed without restart, conditionName could be null
         }
 
-        UserCommunityProperty.ShowConditions condition =
-                UserCommunityProperty.ShowConditions.valueOf(conditionName);
         switch (condition) {
             case Always:
                 return true;
