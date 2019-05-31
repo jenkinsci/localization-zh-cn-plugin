@@ -38,6 +38,11 @@ public class CommunityDecorator extends PageDecorator {
         }
 
         String conditionName = communityProperty.getShowCondition();
+        if(conditionName == null) {
+            // when this plugin just be installed without restart, could be under this situation
+            return isCurrentLanguage;
+        }
+
         UserCommunityProperty.ShowConditions condition =
                 UserCommunityProperty.ShowConditions.valueOf(conditionName);
         switch (condition) {

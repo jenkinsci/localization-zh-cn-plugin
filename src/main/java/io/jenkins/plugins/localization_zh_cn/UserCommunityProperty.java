@@ -10,7 +10,7 @@ import org.kohsuke.stapler.DataBoundSetter;
 import javax.annotation.Nonnull;
 
 public class UserCommunityProperty extends UserProperty {
-    private String showCondition;
+    private String showCondition = ShowConditions.Chinese.name();
 
     @DataBoundConstructor
     public UserCommunityProperty(){}
