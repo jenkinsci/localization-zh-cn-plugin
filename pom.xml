@@ -130,6 +130,9 @@
         <directory>plugins/pipeline-stage-view-plugin/ui/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>plugins/priority-sorter-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>plugins/role-strategy-plugin/src/main/resources</directory>
       </resource>
       <resource>
