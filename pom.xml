@@ -4,14 +4,14 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>2.7</version>
+    <version>3.42</version>
   </parent>
 
   <artifactId>localization-zh-cn</artifactId>
-  <version>0.0.14-SNAPSHOT</version>
+  <version>1.0.8-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>Localization: Chinese (Simplified)</name>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/Localization+zh+cn+Plugin</url>
+  <url>https://wiki.jenkins.io/display/JENKINS/Localization-zh-cn+Plugin</url>
 
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
@@ -21,7 +21,7 @@
   </scm>
   
   <properties>
-     <jenkins.version>1.580.1</jenkins.version>
+    <jenkins.version>2.173</jenkins.version>
      <java.level>8</java.level>
    </properties>
 
@@ -55,6 +55,13 @@
       </resource>
       <resource>
         <directory>plugins/credentials-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/credentials-plugin/src/main/webapp</directory>
+        <targetPath>webapp</targetPath>
+      </resource>
+      <resource>
+        <directory>plugins/customize-build-now-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/cloudbees-folder-plugin/src/main/resources</directory>
@@ -114,13 +121,16 @@
         <directory>plugins/workflow-support-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/pipeline-input-step-plugin/pipeline-model-definition/src/main/resources</directory>
+        <directory>plugins/pipeline-input-step-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/pipeline-model-definition-plugin/pipeline-model-definition/src/main/resources</directory>
+        <directory>plugins/pipeline-model-definition-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/pipeline-stage-view-plugin/ui/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/priority-sorter-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/role-strategy-plugin/src/main/resources</directory>
@@ -154,6 +164,11 @@
       <groupId>org.jenkins-ci</groupId>
       <artifactId>symbol-annotation</artifactId>
       <version>1.14</version>
+    </dependency>
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>localization-support</artifactId>
+      <version>1.1</version>
     </dependency>
   </dependencies>
 

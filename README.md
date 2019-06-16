@@ -1,11 +1,11 @@
 # Simplified Chinese Plugin
+[![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/localization-zh-cn.svg)](https://plugins.jenkins.io/localization-zh-cn)
+[![Jenkins Plugin Installs](https://img.shields.io/jenkins/plugin/i/localization-zh-cn.svg?color=blue)](https://plugins.jenkins.io/localization-zh-cn)
+[![Gitter](https://badges.gitter.im/jenkinsci/localization-zh-cn-plugin.svg)](https://gitter.im/jenkinsci/localization-zh-cn-plugin)
+
 
 Simplified Chinese Localization for Jenkins core and plugins.  
 See [JEP-216](https://github.com/jenkinsci/jep/blob/master/jep/216/README.adoc) for design details.
-
-# Limitation
-
-The plugin only support *.jelly and help-*.html localization resources for now.
 
 # How-To Guides
 

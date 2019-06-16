@@ -1,6 +1,6 @@
 ### Submitter checklist
 
-- [ ] [Know translation specification](https://github.com/jenkinsci/localization-zh-cn-plugin/specification.md)
+- [ ] [Know translation specification](https://github.com/jenkins-zh/translation-spec/blob/master/specification.md)
 
 ### Desired reviewers
 

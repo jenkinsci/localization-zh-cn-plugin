@@ -1,0 +1,20 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt">
+  <l:layout norefresh="true" permission="${app.READ}">
+    <st:include page="sidepanel.jelly" it="${app}"/>
+    <l:main-panel>
+      <div style="margin:10px;">
+      Jenkins Core 及其插件的简体中文语言包，由 <a href="https://jenkins-zh.cn/about" target="_blank">Jenkins 中文社区</a>维护。我们致力于给每一位 Jenkins 的中文用户带来更好的体验，并非常欢迎您反馈任何建议和意见。
+      </div>
+
+      <div style="margin:10px;">
+        我们会在 Jenkins 社区官方微信公众号上发布以下资讯信息：
+        <li>社区的线上以及线下活动，例如：Jenkins Meetup</li>
+        <li>官方博客文章</li>
+        <li>CI/CD 相关的技术文章（原创、翻译），案例分享</li>
+        <li>版本更新发布</li>
+        <img width="300px" height="300px" src="${rootURL}/plugin/localization-zh-cn/images/jenkins-wechat.png" alt="Jenkins 微信公众号二维码"/>
+      </div>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>
