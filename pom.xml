@@ -67,6 +67,9 @@
         <directory>plugins/cloudbees-folder-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>plugins/gitlab-branch-source-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>plugins/kubernetes-plugin/src/main/resources</directory>
       </resource>
       <resource>
