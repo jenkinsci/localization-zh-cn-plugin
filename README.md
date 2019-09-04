@@ -11,6 +11,9 @@ See [JEP-216](https://github.com/jenkinsci/jep/blob/master/jep/216/README.adoc) 
 
 Here are some guides about [how to contribute localization](https://jenkins.io/doc/developer/internationalization/) for a Jenkins plugin.
 
+[jcli](https://github.com/jenkins-zh/jenkins-cli) could help you upload this plugin into your
+Jenkins. The command is `jcli plugin upload`.
+
 # Contribution
 
 If you are interested in localization, please check [Chinese Localization SIG](https://jenkins.io/sigs/chinese-localization/) first.
