@@ -51,6 +51,9 @@
         <directory>plugins/bitbucket-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>plugins/branch-api-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>plugins/credentials-binding-plugin/src/main/resources</directory>
       </resource>
       <resource>
