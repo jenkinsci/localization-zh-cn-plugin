@@ -142,6 +142,9 @@
         <directory>plugins/role-strategy-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>plugins/scm-api-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>plugins/ssh-slaves-plugin/src/main/resources</directory>
       </resource>
       <resource>
