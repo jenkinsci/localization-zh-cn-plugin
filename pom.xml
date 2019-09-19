@@ -70,6 +70,9 @@
         <directory>plugins/cloudbees-folder-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>plugins/git-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>plugins/github-branch-source-plugin/src/main/resources</directory>
       </resource>
       <resource>
