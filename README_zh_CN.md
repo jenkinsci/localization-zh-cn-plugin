@@ -19,3 +19,8 @@
 所有的中文字符都需要转为为 ASCII.这样难以阅读，你可以使用这个[在线工具](https://native2ascii.net/)进行快速地转化。
 
 注意，每位贡献者都应该遵循[翻译规范](specification.md)。
+
+# Actions
+
+我们使用 [git-backup-actions](https://github.com/jenkins-zh/git-backup-actions/) 来备份当前仓库到 
+[gitee](https://gitee.com/jenkins-zh/localization-zh-cn-plugin).
