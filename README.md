@@ -21,3 +21,8 @@ If you are interested in localization, please check [Chinese Localization SIG](h
 All Chinese characters will convert to ASCII. It's hard to read. So you could use [online tools](https://native2ascii.net/).
 
 Everyone should follow the [translation specification](specification.md).
+
+# Actions
+
+We use [git-backup-actions](https://github.com/jenkins-zh/git-backup-actions/) to backup this repo into 
+[gitee](https://gitee.com/jenkins-zh/localization-zh-cn-plugin).
