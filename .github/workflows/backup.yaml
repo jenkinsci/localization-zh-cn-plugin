@@ -14,4 +14,4 @@ jobs:
         uses: jenkins-zh/git-backup-actions@v0.0.1
         env:
           GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
-          TARGET_GIT: "git@gitee.com:surenpi/surenpi.git"
+          TARGET_GIT: "git@gitee.com:jenkins-zh/localization-zh-cn-plugin.git"
