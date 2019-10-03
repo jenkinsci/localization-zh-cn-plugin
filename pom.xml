@@ -171,6 +171,9 @@
       <resource>
         <directory>plugins/ws-cleanup-plugin/main/resources</directory>
       </resource>
+      <resource>
+        <directory>plugins/label-verifier-plugin/src/main/resources</directory>
+      </resource>
     </resources>
   </build>
 
