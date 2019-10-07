@@ -8,10 +8,10 @@
   </parent>
 
   <artifactId>localization-zh-cn</artifactId>
-  <version>1.0.8-SNAPSHOT</version>
+  <version>1.0.10-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>Localization: Chinese (Simplified)</name>
-  <url>https://wiki.jenkins.io/display/JENKINS/Localization-zh-cn+Plugin</url>
+  <url>https://github.com/jenkinsci/localization-zh-cn-plugin</url>
 
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
@@ -51,6 +51,9 @@
         <directory>plugins/bitbucket-plugin/src/main/resources</directory>
       </resource>
       <resource>
+        <directory>plugins/branch-api-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>plugins/credentials-binding-plugin/src/main/resources</directory>
       </resource>
       <resource>
@@ -65,6 +68,15 @@
       </resource>
       <resource>
         <directory>plugins/cloudbees-folder-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/git-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/github-branch-source-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/gitlab-branch-source-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/kubernetes-plugin/src/main/resources</directory>
@@ -134,6 +146,9 @@
       </resource>
       <resource>
         <directory>plugins/role-strategy-plugin/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/scm-api-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/ssh-slaves-plugin/src/main/resources</directory>

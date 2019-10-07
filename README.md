@@ -11,6 +11,9 @@ See [JEP-216](https://github.com/jenkinsci/jep/blob/master/jep/216/README.adoc) 
 
 Here are some guides about [how to contribute localization](https://jenkins.io/doc/developer/internationalization/) for a Jenkins plugin.
 
+[jcli](https://github.com/jenkins-zh/jenkins-cli) could help you upload this plugin into your
+Jenkins. The command is `jcli plugin upload`.
+
 # Contribution
 
 If you are interested in localization, please check [Chinese Localization SIG](https://jenkins.io/sigs/chinese-localization/) first.
@@ -18,3 +21,8 @@ If you are interested in localization, please check [Chinese Localization SIG](h
 All Chinese characters will convert to ASCII. It's hard to read. So you could use [online tools](https://native2ascii.net/).
 
 Everyone should follow the [translation specification](specification.md).
+
+# Actions
+
+We use [git-backup-actions](https://github.com/jenkins-zh/git-backup-actions/) to backup this repo into 
+[gitee](https://gitee.com/jenkins-zh/localization-zh-cn-plugin).
