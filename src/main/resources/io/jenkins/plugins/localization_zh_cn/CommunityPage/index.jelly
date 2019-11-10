@@ -18,12 +18,17 @@
 
       <h2>更新中心镜像设置</h2>
 
+      修改更新中心的地址为
+      https://jenkins-zh.gitee.io/update-center-mirror/tsinghua/update-center.json
+
       <f:form method="post" action="/update-center-mirror/use">
         <f:submit name="reload" value="使用"/>
       </f:form>
       <f:form method="post" action="/update-center-mirror/remove">
         <f:submit name="reload" value="移除"/>
       </f:form>
+
+      <a href="${rootURL}/pluginManager/advanced">设置更新中心地址</a>
     </l:main-panel>
   </l:layout>
 </j:jelly>
