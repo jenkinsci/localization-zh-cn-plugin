@@ -8,8 +8,11 @@ import org.kohsuke.stapler.StaplerResponse;
 import org.kohsuke.stapler.interceptor.RequirePOST;
 
 import javax.annotation.CheckForNull;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.net.URL;
+import java.util.logging.Logger;
 
 @Extension
 public class UpdateCenterAction implements RootAction {
@@ -22,10 +25,17 @@ public class UpdateCenterAction implements RootAction {
             return;
         }
 
+        ServletContext context = Jenkins.get().servletContext;
+        if (context == null) {
+            LOGGER.warning("cannot get the servlet context when use the mirror certificate");
+            return;
+        }
+
+        URL caRoot = context.getResource("/WEB-INF/update-center-rootCAs");
         try (InputStream input = this.getClass().getResourceAsStream("/" + CRT);
-             OutputStream output = new FileOutputStream(new File(Jenkins.get().getRootDir(),
-                     "/war/WEB-INF/update-center-rootCAs/" + CRT))) {
+             OutputStream output = new FileOutputStream(new File(caRoot.getFile(), CRT))) {
             if (input == null) {
+                LOGGER.warning("no mirror certificate found");
                 return;
             }
 
@@ -66,4 +76,6 @@ public class UpdateCenterAction implements RootAction {
     public String getUrlName() {
         return "/update-center-mirror";
     }
+
+    private static final Logger LOGGER = Logger.getLogger(UpdateCenterAction.class.getName());
 }

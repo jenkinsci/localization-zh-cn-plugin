@@ -21,10 +21,10 @@
       修改更新中心的地址为
       https://updates.jenkins-zh.cn/update-center.json
 
-      <f:form method="post" action="/update-center-mirror/use">
+      <f:form method="post" action="${rootURL}/update-center-mirror/use">
         <f:submit name="reload" value="使用"/>
       </f:form>
-      <f:form method="post" action="/update-center-mirror/remove">
+      <f:form method="post" action="${rootURL}/update-center-mirror/remove">
         <f:submit name="reload" value="移除"/>
       </f:form>
 
