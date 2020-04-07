@@ -54,7 +54,9 @@ public class UpdateCenterAction implements RootAction {
         File crtFile = new File(Jenkins.get().getRootDir(),
                 "/war/WEB-INF/update-center-rootCAs/" + CRT);
         if(crtFile.isFile()) {
-            crtFile.delete();
+            if(!crtFile.delete()) {
+                LOGGER.warning("Failed to delete file " + crtFile.getAbsolutePath());
+            }
         }
         response.sendRedirect(Jenkins.get().getRootUrl() + "/chinese");
     }
