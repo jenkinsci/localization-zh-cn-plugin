@@ -32,8 +32,10 @@ public class UpdateCenterAction implements RootAction {
         }
 
         URL caRoot = context.getResource("/WEB-INF/update-center-rootCAs");
+        String crtPath = caRoot.getFile() + "/" + CRT;
+        String decodedCrtPath = crtPath.replaceAll("%20", " ");
         try (InputStream input = this.getClass().getResourceAsStream("/" + CRT);
-             OutputStream output = new FileOutputStream(new File(caRoot.getFile(), CRT))) {
+             OutputStream output = new FileOutputStream(new File(decodedCrtPath))) {
             if (input == null) {
                 LOGGER.warning("no mirror certificate found");
                 return;
