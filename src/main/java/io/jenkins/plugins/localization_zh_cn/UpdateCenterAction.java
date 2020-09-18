@@ -12,6 +12,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.util.logging.Logger;
 
 @Extension
@@ -32,8 +33,10 @@ public class UpdateCenterAction implements RootAction {
         }
 
         URL caRoot = context.getResource("/WEB-INF/update-center-rootCAs");
+        String crtPath = caRoot.getFile() + CRT;
+        String decodedCrtPath = URLDecoder.decode(crtPath, "utf-8");
         try (InputStream input = this.getClass().getResourceAsStream("/" + CRT);
-             OutputStream output = new FileOutputStream(new File(caRoot.getFile(), CRT))) {
+             OutputStream output = new FileOutputStream(new File(decodedCrtPath))) {
             if (input == null) {
                 LOGGER.warning("no mirror certificate found");
                 return;
@@ -54,7 +57,9 @@ public class UpdateCenterAction implements RootAction {
         File crtFile = new File(Jenkins.get().getRootDir(),
                 "/war/WEB-INF/update-center-rootCAs/" + CRT);
         if(crtFile.isFile()) {
-            crtFile.delete();
+            if(!crtFile.delete()) {
+                LOGGER.warning("Failed to delete file " + crtFile.getAbsolutePath());
+            }
         }
         response.sendRedirect(Jenkins.get().getRootUrl() + "/chinese");
     }

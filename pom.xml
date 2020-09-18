@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>localization-zh-cn</artifactId>
-  <version>1.0.14-SNAPSHOT</version>
+  <version>1.0.21-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>Localization: Chinese (Simplified)</name>
   <url>https://github.com/jenkinsci/localization-zh-cn-plugin</url>
@@ -170,6 +170,9 @@
       </resource>
       <resource>
         <directory>plugins/ws-cleanup-plugin/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>plugins/git-parameter-plugin/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/label-verifier-plugin/src/main/resources</directory>
