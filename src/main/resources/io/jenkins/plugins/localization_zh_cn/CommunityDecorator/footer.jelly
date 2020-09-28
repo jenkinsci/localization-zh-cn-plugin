@@ -1,8 +1,8 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:st="jelly:stapler">
     <j:if test="${it.showCommunityLink()}">
-        <span>
+        <div class="page-footer__links jenkins-zh">
           <a href="${rootURL}/chinese">Jenkins 中文社区</a>
-        </span>
+        </div>
     </j:if>
 </j:jelly>
