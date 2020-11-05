@@ -24,7 +24,7 @@ If you are interested in localization, please check [Chinese Localization SIG](h
 
 All Chinese characters will convert to ASCII. It's hard to read. So you could use [online tools](https://native2ascii.net/).
 
-Everyone should follow the [translation specification](specification.md).
+Everyone should follow the [translation specification](https://github.com/jenkins-zh/translation-spec/blob/master/specification.md).
 
 ## Actions
 
