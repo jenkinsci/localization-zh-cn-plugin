@@ -8,13 +8,13 @@
 
 # 入门教程
 
-这里有一些关于 [如何为 Jenkins 插件贡献本地化](https://jenkins.io/doc/developer/internationalization/) 的教程。
+这里有一些关于 [如何为 Jenkins 插件贡献本地化](https://www.jenkins.io/doc/developer/internationalization/) 的教程。
 
 [jcli](https://github.com/jenkins-zh/jenkins-cli) 可以帮助你快速地把插件上传到你的 Jenkins 中。命令为：`jcli plugin upload`。
 
 # 贡献
 
-如果，你对本地化感兴趣，请首先查看 [中文本地化 SIG](https://jenkins.io/sigs/chinese-localization/)。
+如果，你对本地化感兴趣，请首先查看 [中文本地化 SIG](https://www.jenkins.io/sigs/chinese-localization/)。
 
 所有的中文字符都需要转为为 ASCII.这样难以阅读，你可以使用这个[在线工具](https://native2ascii.net/)进行快速地转化。
 
