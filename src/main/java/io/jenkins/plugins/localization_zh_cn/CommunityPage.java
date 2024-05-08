@@ -1,11 +1,11 @@
 package io.jenkins.plugins.localization_zh_cn;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.model.UnprotectedRootAction;
 import org.jenkinsci.Symbol;
 
-import javax.annotation.CheckForNull;
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 
 @Extension
 @Symbol("chinese")
@@ -16,7 +16,7 @@ public class CommunityPage implements UnprotectedRootAction {
         return null;
     }
 
-    @Nonnull
+    @NonNull
     @Override
     public String getDisplayName() {
         return "Jenkins Chinese Community";

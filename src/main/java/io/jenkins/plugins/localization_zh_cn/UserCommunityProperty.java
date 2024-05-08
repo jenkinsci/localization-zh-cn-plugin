@@ -1,13 +1,12 @@
 package io.jenkins.plugins.localization_zh_cn;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.model.User;
 import hudson.model.UserProperty;
 import hudson.model.UserPropertyDescriptor;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
-
-import javax.annotation.Nonnull;
 
 public class UserCommunityProperty extends UserProperty {
     private String showCondition = ShowConditions.Chinese.name();
@@ -32,7 +31,7 @@ public class UserCommunityProperty extends UserProperty {
             return new UserCommunityProperty();
         }
 
-        @Nonnull
+        @NonNull
         @Override
         public String getDisplayName() {
             return "Chinese Community";
