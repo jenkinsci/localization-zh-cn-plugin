@@ -4,14 +4,14 @@ import hudson.Extension;
 import hudson.model.PageDecorator;
 import hudson.model.User;
 import org.kohsuke.stapler.Stapler;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import java.util.Locale;
 
 @Extension
 public class CommunityDecorator extends PageDecorator {
     public boolean isCurrentLanguage() {
-        StaplerRequest req = Stapler.getCurrentRequest();
+        StaplerRequest2 req = Stapler.getCurrentRequest2();
         if(req == null) {
             return false;
         }
