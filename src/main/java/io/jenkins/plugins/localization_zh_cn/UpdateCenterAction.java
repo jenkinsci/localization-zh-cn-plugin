@@ -9,7 +9,7 @@ import org.apache.commons.io.IOUtils;
 import org.kohsuke.stapler.StaplerResponse;
 import org.kohsuke.stapler.interceptor.RequirePOST;
 
-import javax.annotation.CheckForNull;
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 @Extension
 public class UpdateCenterAction implements RootAction {
-    private final String CRT = "mirror-adapter.crt";
+    private static final String CRT = "mirror-adapter.crt";
 
     @RequirePOST
     @SuppressFBWarnings(value = {"NP_LOAD_OF_KNOWN_NULL_VALUE", "RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE"}, justification = "Spotbugs doesn't grok try-with-resources")
