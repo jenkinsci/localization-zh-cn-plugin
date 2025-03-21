@@ -1,0 +1,45 @@
+name: Grab original and translated files for code review
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    paths:
+      - 'cli/**/**.properties'
+      - 'core/**/**.properties'
+      - 'plugins/**/**.properties'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Grab original and translated files for code review
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - id: changed-files
+        name: get changed files
+        uses: tj-actions/changed-files@v23.1
+        with:
+          separator: ","
+      - name: setup-python-env
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+      - id: python-result
+        name: execute py script
+        run: |
+          pip install -r requirements.txt
+          output=$(python review.py --add=${{ steps.changed-files.outputs.added_files }} --mod=${{ steps.changed-files.outputs.modified_files }} --token=${{ secrets.GITHUB_TOKEN }})
+          output="${output//'%'/'%25'}"
+          output="${output//$'\n'/'%0A'}"
+          output="${output//$'\r'/'%0D'}"
+          echo "::set-output name=conclusion::$output"
+      - name: add comment to pr
+        uses: mshick/add-pr-comment@v1
+        with:
+          message: ${{ steps.python-result.outputs.conclusion }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token-user-login: 'github-actions[bot]'
+          allow-repeats: false
