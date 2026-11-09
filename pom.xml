@@ -136,7 +136,7 @@
         <directory>plugins/pipeline-input-step-plugin/src/main/resources</directory>
       </resource>
       <resource>
-        <directory>plugins/pipeline-model-definition-plugin/src/main/resources</directory>
+        <directory>plugins/pipeline-model-definition-plugin/pipeline-model-definition/src/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/pipeline-stage-view-plugin/ui/src/main/resources</directory>
@@ -167,9 +167,6 @@
       </resource>
       <resource>
         <directory>src/main/resources</directory>
-      </resource>
-      <resource>
-        <directory>plugins/ws-cleanup-plugin/main/resources</directory>
       </resource>
       <resource>
         <directory>plugins/git-parameter-plugin/src/main/resources</directory>
