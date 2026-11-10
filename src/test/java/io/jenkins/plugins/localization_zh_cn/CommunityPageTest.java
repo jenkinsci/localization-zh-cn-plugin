@@ -5,56 +5,61 @@ import org.htmlunit.WebRequest;
 import org.htmlunit.html.HtmlAnchor;
 import org.htmlunit.html.HtmlPage;
 import org.htmlunit.util.UrlUtils;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.jvnet.hudson.test.JenkinsRule;
-import org.xml.sax.SAXException;
+import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class CommunityPageTest {
-    @Rule
-    public JenkinsRule rule = new JenkinsRule();
+@WithJenkins
+class CommunityPageTest {
 
-    @Test
-    public void indexPage() throws IOException, SAXException {
-        JenkinsRule.WebClient client = rule.createWebClient();
+    private JenkinsRule rule;
 
-        client.goTo("chinese");
+    @BeforeEach
+    void beforeEach(JenkinsRule rule) {
+        this.rule = rule;
     }
 
     @Test
-    public void noLinkToTheClosedCommunityWebsite() throws IOException, SAXException {
-        HtmlPage page = rule.createWebClient().goTo("chinese");
-        assertFalse(page.getWebResponse().getContentAsString().contains("jenkins-zh.cn/about"));
-    }
-
-    @Test
-    public void locale() throws IOException, SAXException {
-        JenkinsRule.WebClient client = rule.createWebClient();
-        URL rootURL = UrlUtils.toUrlUnsafe(client.getContextPath());
-
-        WebRequest webRequest = new WebRequest(rootURL);
-        webRequest.setAdditionalHeader("Accept-Language", Locale.ENGLISH.toString());
-
-        // for English locale
-        HtmlPage page = client.getPage(webRequest);
-        HtmlAnchor anchor = null;
-        try {
-            page.getAnchorByText("Jenkins 中文社区");
-        } catch (ElementNotFoundException e) {
-            // should throw an exception here
+    void indexPage() throws Exception {
+        try (JenkinsRule.WebClient client = rule.createWebClient()) {
+            client.goTo("chinese");
         }
+    }
 
-        // for Chinese locale
-        webRequest.removeAdditionalHeader("Accept-Language");
-        webRequest.setAdditionalHeader("Accept-Language", Locale.SIMPLIFIED_CHINESE.toString());
-        page = client.getPage(webRequest);
-        anchor = page.getAnchorByText("Jenkins 中文社区");
-        assertNotNull(anchor);
+    @Test
+    void noLinkToTheClosedCommunityWebsite() throws Exception {
+        try (JenkinsRule.WebClient client = rule.createWebClient()) {
+            HtmlPage page = client.goTo("chinese");
+            assertFalse(page.getWebResponse().getContentAsString().contains("jenkins-zh.cn/about"));
+        }
+    }
+
+    @Test
+    void locale() throws Exception {
+        try (JenkinsRule.WebClient client = rule.createWebClient()) {
+            URL rootURL = UrlUtils.toUrlUnsafe(client.getContextPath());
+
+            WebRequest webRequest = new WebRequest(rootURL);
+            webRequest.setAdditionalHeader("Accept-Language", Locale.ENGLISH.toString());
+
+            // for English locale
+            HtmlPage englishPage = client.getPage(webRequest);
+            // should throw an exception here
+            assertThrows(ElementNotFoundException.class,
+                () -> englishPage.getAnchorByText("Jenkins 中文社区"));
+
+            // for Chinese locale
+            webRequest.removeAdditionalHeader("Accept-Language");
+            webRequest.setAdditionalHeader("Accept-Language", Locale.SIMPLIFIED_CHINESE.toString());
+            HtmlPage chinesePage = client.getPage(webRequest);
+            HtmlAnchor anchor = chinesePage.getAnchorByText("Jenkins 中文社区");
+            assertNotNull(anchor);
+        }
     }
 }
