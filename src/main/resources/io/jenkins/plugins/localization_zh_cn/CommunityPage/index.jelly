@@ -15,20 +15,6 @@
         <li>版本更新发布</li>
         <img width="300px" height="300px" src="${rootURL}/plugin/localization-zh-cn/images/jenkins-wechat.png" alt="Jenkins 微信公众号二维码"/>
       </div>
-
-      <h2>更新中心镜像设置</h2>
-
-      修改更新中心的地址为
-      https://updates.jenkins-zh.cn/update-center.json
-
-      <f:form method="post" action="${rootURL}/update-center-mirror/use">
-        <f:submit name="reload" value="使用"/>
-      </f:form>
-      <f:form method="post" action="${rootURL}/update-center-mirror/remove">
-        <f:submit name="reload" value="移除"/>
-      </f:form>
-
-      <a href="${rootURL}/pluginManager/advanced">设置更新中心地址</a>
     </l:main-panel>
   </l:layout>
 </j:jelly>
