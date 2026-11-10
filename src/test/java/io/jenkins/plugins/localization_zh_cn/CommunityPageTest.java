@@ -28,6 +28,12 @@ public class CommunityPageTest {
     }
 
     @Test
+    public void noLinkToTheClosedCommunityWebsite() throws IOException, SAXException {
+        HtmlPage page = rule.createWebClient().goTo("chinese");
+        assertFalse(page.getWebResponse().getContentAsString().contains("jenkins-zh.cn/about"));
+    }
+
+    @Test
     public void locale() throws IOException, SAXException {
         JenkinsRule.WebClient client = rule.createWebClient();
         URL rootURL = UrlUtils.toUrlUnsafe(client.getContextPath());
